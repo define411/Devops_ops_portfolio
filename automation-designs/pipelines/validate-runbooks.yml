@@ -1,0 +1,12 @@
+trigger:
+- main
+
+steps:
+- script: |
+    echo "Validating runbooks and automation designs exist"
+    test -d runbooks
+    test -d automation-designs
+    test -f runbooks/link-monitoring.md
+    test -f automation-designs/link-monitoring-automation.md
+  displayName: "Validate operational documentation"
+``
